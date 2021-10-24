@@ -33,7 +33,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name: 'Glaxier',
-        helpText: 'This is a help text.'
+        helpText: 'This website can forecast weather all you have to do is search by valid location name.'
     })
 })
 
@@ -57,18 +57,6 @@ app.get('/weather', (req, res) => {
                 location: location,
             })
         })
-    })
-})
-
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        })
-    }
-    console.log(req.query.search)
-    res.send({
-        products: []
     })
 })
 
