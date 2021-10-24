@@ -3,5 +3,7 @@ Simple Node.js Express forecast website using [Weatherstack](https://weatherstac
 
 Don't forget to edit [forecast](https://github.com/Glaxier0/Node.js-weather-website/blob/main/src/utils/forecast.js) and [geocode](https://github.com/Glaxier0/Node.js-weather-website/blob/main/src/utils/geocode.js) urls with your own access keys.
 
+Run script using nodemon: npm run dev
+
 [Working heraku website](https://glaxier-weather-app.herokuapp.com)
 
