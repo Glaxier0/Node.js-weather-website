@@ -2,12 +2,13 @@ const path = require('path')
 const express = require('express');
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
+const publicDirectoryPath = path.join(__dirname, '../public')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
 
 const app = express();
-const publicDirectoryPath = path.join(__dirname, '../public')
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
@@ -87,8 +88,7 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.!')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
-module.exports = app;
