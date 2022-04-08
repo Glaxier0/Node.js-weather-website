@@ -1,6 +1,5 @@
 /node_modules/
 /web-server.iml
 /bin/
-/routes/
 /.idea/
-
+/routes/
